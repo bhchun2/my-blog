@@ -1,0 +1,39 @@
+:root {
+  --tok-comment: #6b7280;
+  --tok-string: #16794f;
+  --tok-number: #b45309;
+  --tok-keyword: #7c3aed;
+  --tok-function: #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tok-comment: #7a8394;
+    --tok-string: #7ee2a8;
+    --tok-number: #f0b35e;
+    --tok-keyword: #c4a4ff;
+    --tok-function: #82b4ff;
+  }
+}
+
+:root[data-theme="light"] {
+  --tok-comment: #6b7280;
+  --tok-string: #16794f;
+  --tok-number: #b45309;
+  --tok-keyword: #7c3aed;
+  --tok-function: #2563eb;
+}
+
+:root[data-theme="dark"] {
+  --tok-comment: #7a8394;
+  --tok-string: #7ee2a8;
+  --tok-number: #f0b35e;
+  --tok-keyword: #c4a4ff;
+  --tok-function: #82b4ff;
+}
+
+.tok-comment { color: var(--tok-comment); font-style: italic; }
+.tok-string { color: var(--tok-string); }
+.tok-number { color: var(--tok-number); }
+.tok-keyword { color: var(--tok-keyword); font-weight: 600; }
+.tok-function { color: var(--tok-function); }

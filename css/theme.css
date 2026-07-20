@@ -1,0 +1,88 @@
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol { margin: 0; }
+ul, ol { padding: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ---- Design tokens: light (default) ---- */
+:root {
+  --color-bg: #ffffff;
+  --color-bg-elevated: #f6f7f9;
+  --color-text: #1a1d21;
+  --color-text-muted: #5b6472;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-border: #e3e6ea;
+  --color-code-bg: #f2f3f5;
+  --color-code-text: #1a1d21;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, "Liberation Mono", monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+
+  --content-max-width: 42rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  color-scheme: light;
+}
+
+/* ---- Dark tokens via OS preference ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #14161a;
+    --color-bg-elevated: #1c1f24;
+    --color-text: #e7e9ec;
+    --color-text-muted: #9aa3af;
+    --color-accent: #5b9dff;
+    --color-accent-hover: #7fb1ff;
+    --color-border: #2b2f36;
+    --color-code-bg: #1c1f24;
+    --color-code-text: #e7e9ec;
+
+    color-scheme: dark;
+  }
+}
+
+/* ---- Explicit overrides (manual toggle wins over OS setting) ---- */
+:root[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-elevated: #f6f7f9;
+  --color-text: #1a1d21;
+  --color-text-muted: #5b6472;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-border: #e3e6ea;
+  --color-code-bg: #f2f3f5;
+  --color-code-text: #1a1d21;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #14161a;
+  --color-bg-elevated: #1c1f24;
+  --color-text: #e7e9ec;
+  --color-text-muted: #9aa3af;
+  --color-accent: #5b9dff;
+  --color-accent-hover: #7fb1ff;
+  --color-border: #2b2f36;
+  --color-code-bg: #1c1f24;
+  --color-code-text: #e7e9ec;
+
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
