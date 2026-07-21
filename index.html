@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Blog</title>
+  <title>Chun Pro(1000%) Blog</title>
   <meta name="description" content="마크다운으로 쓰는 블로그">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9D%3C/text%3E%3C/svg%3E">
   <script>
@@ -17,6 +17,7 @@
     })();
   </script>
   <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/starfield.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/components.css">
@@ -24,7 +25,7 @@
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-title" href="index.html">My Blog</a>
+      <a class="site-title" href="index.html">Chun Pro(1000%) Blog</a>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="다크 모드로 전환"></button>
     </div>
   </header>
@@ -35,16 +36,31 @@
       <div id="tag-filter" class="tag-filter" aria-label="태그 필터"></div>
     </div>
 
-    <ul id="post-list" class="post-list" aria-live="polite">
-      <li class="post-list__empty">글을 불러오는 중...</li>
-    </ul>
+    <section class="latest-section">
+      <h2 class="section-heading">최신 글 (https://blog.naver.com/galaxia999)</h2>
+      <div class="board-panel">
+        <ul id="latest-list" class="post-board" aria-live="polite">
+          <li class="post-board__empty">글을 불러오는 중...</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="all-posts-section">
+      <h2 class="section-heading">전체 글</h2>
+      <ul id="post-list" class="post-list" aria-live="polite">
+        <li class="post-list__empty">글을 불러오는 중...</li>
+      </ul>
+
+      <nav id="pagination" class="pagination" aria-label="페이지 네비게이션"></nav>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Blog</p>
+    <p>&copy; 2026 Chun Pro(1000%) Blog</p>
   </footer>
 
   <script type="module" src="js/theme.js"></script>
+  <script type="module" src="js/starfield.js"></script>
   <script type="module" src="js/listPage.js"></script>
 </body>
 </html>
